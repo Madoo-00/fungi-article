@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>الفطريات.. طعام للإنسان</title>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#06130e;--ink:#f1e8d4;--muted:#b9ae97;--gold:#e3b04b;--gold2:#ffd98a;--ruby:#e2483a;--leaf:#6fd08c;--soil:#8a5a35;--glass:#ffffff0d;--line:#e3b04b40;color-scheme:dark;box-sizing:border-box;padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px;background:var(--bg)}
+body{margin:0;color:var(--ink);font-family:'IBM Plex Sans Arabic',Tahoma,sans-serif;font-size:17px;line-height:2;overflow-x:hidden;background:radial-gradient(900px 500px at 90% 8%,#1b4a3166,transparent),radial-gradient(800px 600px at 5% 55%,#5a2a1a40,transparent),radial-gradient(700px 500px at 90% 92%,#e3b04b1a,transparent),var(--bg)}
+#bar{position:fixed;top:0;right:0;left:0;height:4px;z-index:50;transform-origin:right;transform:scaleX(0);background:linear-gradient(270deg,var(--gold2),var(--ruby),var(--leaf))}
+nav{position:sticky;top:0;z-index:40;padding-top:env(safe-area-inset-top,0px);display:flex;gap:8px;overflow-x:auto;padding:calc(10px + env(safe-area-inset-top,0px)) 14px 10px;background:#06130ecc;backdrop-filter:blur(14px);border-bottom:1px solid var(--line);scrollbar-width:none}
+nav a{flex:none;color:var(--ink);text-decoration:none;font-size:.9rem;padding:3px 16px;border-radius:999px;border:1px solid var(--line);background:var(--glass);transition:.25s}
+nav a:active,nav a:hover{background:var(--gold);color:#1a1005;box-shadow:0 0 18px var(--gold)}
+/* HERO */
+.hero{position:relative;overflow:hidden;text-align:center;padding:46px 18px 0;min-height:620px;background:linear-gradient(180deg,#02070a,#0b2a1f 70%,#124a33)}
+.flash{position:absolute;inset:0;background:#cfe6ff;opacity:0;pointer-events:none;animation:flash 11s infinite}
+@keyframes flash{0%,93%,100%{opacity:0}94%{opacity:.28}95%{opacity:.05}96%{opacity:.22}98%{opacity:0}}
+.star{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;animation:tw 3s ease-in-out infinite}
+@keyframes tw{50%{opacity:.15}}
+.moon{position:absolute;top:34px;left:26px;width:64px;height:64px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fffbe8,#f4dc9b 60%,#d6b46a);box-shadow:0 0 50px 14px #f4dc9b55;animation:glow 6s ease-in-out infinite}
+@keyframes glow{50%{box-shadow:0 0 70px 24px #f4dc9b66}}
+.kicker{position:relative;display:inline-block;padding:2px 18px;border:1px solid var(--line);border-radius:999px;color:var(--gold2);font-size:.88rem;background:#00000040;backdrop-filter:blur(6px)}
+.hero h1{position:relative;margin:14px 0 6px;font-family:'Aref Ruqaa',serif;font-weight:700;font-size:clamp(2.8rem,13vw,5rem);line-height:1.35;background:linear-gradient(100deg,#fff1c7,#ffc965,#ff7d5a,#ffc965,#fff1c7);background-size:250%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 7s linear infinite;filter:drop-shadow(0 6px 22px #e3b04b44)}
+@keyframes shine{to{background-position:-250% 0}}
+.hero p.lead{position:relative;margin:0 auto;max-width:28rem;color:#d9ccb2}
+.scene{position:relative;display:block;width:100%;max-width:640px;height:auto;margin:6px auto 0}
+.sway{transform-box:fill-box;transform-origin:50% 100%;animation:sway 4.5s ease-in-out infinite}
+.sway.b{animation-duration:5.5s;animation-delay:-1.5s}.sway.c{animation-duration:3.8s;animation-delay:-2.4s}
+@keyframes sway{0%,100%{transform:rotate(-2.5deg)}50%{transform:rotate(2.5deg)}}
+.pulse{animation:pulse 3s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.45}}
+.fly{position:absolute;border-radius:50%;background:radial-gradient(circle,#fff3b0,#ffc94a00 70%);animation:drift ease-in-out infinite;pointer-events:none}
+@keyframes drift{0%,100%{transform:translate(0,0);opacity:.15}50%{transform:translate(var(--x),var(--y));opacity:1}}
+.hero:after{content:"";position:absolute;inset:auto 0 -1px;height:70px;background:linear-gradient(0deg,var(--bg),transparent)}
+/* MARQUEE */
+.mq{overflow:hidden;border-block:1px solid var(--line);background:#e3b04b12;padding:6px 0;margin-top:-1px}
+.mq div{display:flex;width:max-content;animation:mq 26s linear infinite}
+.mq span{white-space:nowrap;padding:0 18px;color:var(--gold2);font-family:'Aref Ruqaa',serif;font-size:1.25rem}
+@keyframes mq{to{transform:translateX(50%)}}
+/* LAYOUT */
+main{max-width:820px;margin:auto;padding:6px 16px 34px}
+.sec{position:relative;overflow:hidden;margin:28px 0;padding:26px 20px;border-radius:30px;border:1px solid var(--line);background:linear-gradient(160deg,#ffffff12,#ffffff05);backdrop-filter:blur(10px);box-shadow:0 30px 60px -34px #000}
+.sec>*{position:relative;z-index:1}
+.sec:before{content:"";position:absolute;z-index:0;top:-120px;left:-80px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,var(--aura,#e3b04b33),transparent 70%);animation:aura 9s ease-in-out infinite}
+@keyframes aura{50%{transform:translate(60px,70px) scale(1.2)}}
+.yeast{--aura:#ffd98a40}.truf{--aura:#a8662f55}.safe{--aura:#e2483a44}
+.head{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+.badge{flex:none;width:74px;height:74px;border-radius:24px;display:grid;place-items:center;background:linear-gradient(145deg,#e3b04b33,#ffffff0a);border:1px solid var(--line);box-shadow:0 0 28px #e3b04b22}
+.badge svg{width:56px;height:56px}
+.badge .em{font-size:2.2rem;line-height:1}
+h2{margin:0;font-family:'Aref Ruqaa',serif;font-size:2.2rem;line-height:1.4;color:var(--gold2)}
+.truf h2{color:#f0c38e}.safe h2{color:#ff9a8d}
+h3{display:flex;align-items:center;gap:10px;margin:28px 0 10px;font-size:1.1rem;font-weight:700;color:var(--leaf)}
+h3:before{content:"";width:26px;height:5px;border-radius:9px;background:linear-gradient(90deg,var(--gold),var(--ruby))}
+p{margin:6px 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips span{padding:0 14px;border-radius:999px;font-size:.88rem;border:1px solid var(--line);background:#e3b04b14;color:var(--gold2)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:12px}
+.c{position:relative;padding:14px 16px;border-radius:20px;background:#0000002e;border:1px solid #ffffff14;transition:transform .3s,border-color .3s,box-shadow .3s}
+.c:hover,.c:active{transform:translateY(-5px) rotate(-.6deg);border-color:var(--gold);box-shadow:0 16px 30px -14px #e3b04b88}
+.c .e{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:14px;font-size:1.4rem;line-height:1;background:#e3b04b1f;margin-bottom:2px;animation:bob 3.4s ease-in-out infinite}
+.c:nth-child(2n) .e{animation-delay:-1s}.c:nth-child(3n) .e{animation-delay:-2s}
+@keyframes bob{50%{transform:translateY(-4px) scale(1.08)}}
+.c b{display:block;color:var(--gold2);font-size:1rem}
+.c small{display:block;color:var(--muted);font-size:.9rem;line-height:1.85}
+.steps{list-style:none;margin:8px 0;padding:0 34px 0 0;position:relative}
+.steps:before{content:"";position:absolute;right:15px;top:10px;bottom:10px;width:3px;border-radius:9px;background:linear-gradient(180deg,var(--gold),var(--ruby),var(--leaf));transform:scaleY(0);transform-origin:top;transition:transform 1.6s ease .2s}
+.on .steps:before,.steps.on:before{transform:scaleY(1)}
+.steps{counter-reset:s}
+.steps li{counter-increment:s;position:relative;margin:14px 0;padding:6px 14px;border-radius:16px;background:#ffffff08}
+.steps li:before{content:counter(s);position:absolute;right:-47px;top:6px;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:.92rem;line-height:1;color:#1a1005;background:linear-gradient(135deg,var(--gold2),var(--gold));box-shadow:0 0 0 5px #e3b04b2a;animation:ring 2.8s ease-in-out infinite}
+@keyframes ring{50%{box-shadow:0 0 0 10px #e3b04b00}}
+.nut{display:flex;flex-wrap:wrap;gap:8px}
+.nut span{padding:0 14px;border-radius:12px;font-size:.9rem;color:#06130e;font-weight:500;background:linear-gradient(135deg,var(--leaf),#b5e8a6)}
+.quote{margin:18px 0 4px;padding:18px 18px;border-radius:24px;text-align:center;font-family:'Aref Ruqaa',serif;font-size:1.6rem;line-height:1.8;color:#fff3d4;background:linear-gradient(135deg,#e3b04b33,#e2483a22);border:1px solid var(--line)}
+.quote small{display:block;font-family:'IBM Plex Sans Arabic',sans-serif;font-size:.8rem;color:var(--muted)}
+.safe{border:2px solid #e2483a99;animation:alert 3s ease-in-out infinite}
+@keyframes alert{50%{box-shadow:0 0 34px #e2483a55}}
+.safe li{margin:6px 0}
+ul,ol{padding-right:22px;margin:6px 0}
+.src li{font-size:.95rem;line-height:1.95;margin:6px 0}
+.note{margin-top:12px;font-size:.85rem;color:var(--muted)}
+/* scene banners inside sections */
+.ban{display:block;width:100%;height:auto;border-radius:22px;margin:4px 0 12px;border:1px solid var(--line)}
+.bub{position:absolute;z-index:0;bottom:-30px;border-radius:50%;border:1.5px solid #ffd98a88;background:radial-gradient(circle at 30% 30%,#ffffff40,transparent 60%);animation:up linear infinite;pointer-events:none}
+@keyframes up{0%{transform:translateY(0) translateX(0);opacity:0}10%{opacity:1}100%{transform:translateY(-900px) translateX(20px);opacity:0}}
+.rain{animation:rain .9s linear infinite}
+@keyframes rain{from{transform:translateY(-14px);opacity:0}30%{opacity:1}to{transform:translateY(26px);opacity:0}}
+.bolt{animation:bolt 6s infinite;opacity:0}
+@keyframes bolt{0%,88%,100%{opacity:0}90%{opacity:1}92%{opacity:.1}94%{opacity:1}97%{opacity:0}}
+.grow{transform-box:fill-box;transform-origin:50% 50%;animation:grow 5s ease-in-out infinite}
+@keyframes grow{0%,100%{transform:scale(.25)}55%{transform:scale(1)}85%{transform:scale(1)}}
+/* reveal */
+.rv{opacity:0;transform:translateY(34px) scale(.98);transition:opacity .9s ease var(--d,0s),transform .9s ease var(--d,0s)}
+.rv.on{opacity:1;transform:none}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:4px 16px 26px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.steps:before{transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<nav><a href="#intro">المقدمة</a><a href="#yeast">الخميرة</a><a href="#truffle">الكمأة</a><a href="#safety">السلامة</a><a href="#sources">المصادر</a></nav>
+
+<header class="hero">
+<div class="flash"></div><div class="moon"></div>
+<span class="kicker">مقال علمي مصوّر</span>
+<h1>الفطريات.. طعام للإنسان</h1>
+<p class="lead">الخميرة والكمأة، كنزان من مملكة الفطريات الكيسية يغذيان الإنسان منذ آلاف السنين</p>
+<svg class="scene" viewBox="0 0 400 230" aria-hidden="true">
+<defs>
+<radialGradient id="gl"><stop offset="0" stop-color="#ffd98a" stop-opacity=".55"/><stop offset="1" stop-color="#ffd98a" stop-opacity="0"/></radialGradient>
+<linearGradient id="cap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff6a4d"/><stop offset="1" stop-color="#b3261e"/></linearGradient>
+<linearGradient id="cap2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc25c"/><stop offset="1" stop-color="#d9811e"/></linearGradient>
+<linearGradient id="stem" x1="0" x2="1"><stop offset="0" stop-color="#e9d7b6"/><stop offset="1" stop-color="#fff3d8"/></linearGradient>
+</defs>
+<path d="M0 170 Q70 120 150 160 T300 150 T400 140 V230 H0Z" fill="#0b3a28"/>
+<path d="M0 195 Q90 160 190 190 T400 180 V230 H0Z" fill="#0f5136"/>
+<ellipse class="pulse" cx="200" cy="130" rx="130" ry="90" fill="url(#gl)"/>
+<g class="sway"><rect x="186" y="110" width="30" height="92" rx="14" fill="url(#stem)"/><path d="M118 118 Q200 -14 284 118 Q200 130 118 118Z" fill="url(#cap)"/><g fill="#fff6e4"><circle cx="170" cy="70" r="9"/><circle cx="222" cy="52" r="11"/><circle cx="250" cy="88" r="7"/><circle cx="198" cy="92" r="6"/><circle cx="148" cy="100" r="5.5"/></g></g>
+<g class="sway b"><rect x="82" y="156" width="18" height="48" rx="9" fill="url(#stem)"/><path d="M52 160 Q91 100 130 160 Q91 168 52 160Z" fill="url(#cap2)"/><g fill="#fff6e4"><circle cx="80" cy="140" r="4"/><circle cx="104" cy="146" r="3.4"/></g></g>
+<g class="sway c"><rect x="304" y="150" width="20" height="54" rx="10" fill="url(#stem)"/><path d="M272 156 Q314 92 356 156 Q314 166 272 156Z" fill="url(#cap)"/><g fill="#fff6e4"><circle cx="300" cy="136" r="4.4"/><circle cx="326" cy="132" r="3.6"/><circle cx="318" cy="146" r="3"/></g></g>
+<g stroke="#2f9a5e" stroke-width="3" stroke-linecap="round" fill="none"><path d="M20 204 q4-22 10-28"/><path d="M34 204 q-2-18-8-24"/><path d="M370 204 q4-22 10-30"/><path d="M384 204 q-2-16-8-22"/><path d="M236 206 q3-16 9-20"/><path d="M60 206 q2-14 7-18"/></g>
+</svg>
+</header>
+<div class="mq"><div><span>الخميرة ✦ الكمأة ✦ الفطريات الكيسية ✦ الفقع ✦ الترفاس ✦ التخمر ✦ الميكوريزا ✦ بنت الرعد ✦ </span><span>الخميرة ✦ الكمأة ✦ الفطريات الكيسية ✦ الفقع ✦ الترفاس ✦ التخمر ✦ الميكوريزا ✦ بنت الرعد ✦ </span></div></div>
+
+<main>
+<section class="sec rv" id="intro">
+<div class="head"><div class="badge"><span class="em">🍄</span></div><h2>المقدمة</h2></div>
+<p>الفطريات كائنات حية تختلف عن النباتات والحيوانات، فهي لا تصنع غذاءها بالبناء الضوئي، بل تحصل عليه بامتصاص المواد العضوية من بيئتها. وقد عرف الإنسان بعضها طعامًا منذ آلاف السنين.</p>
+<p>ومن أهم مجموعاتها <b>الفطريات الكيسية (Ascomycota)</b>، وهي أكبر شعب الفطريات عددًا، وتكوّن أبواغها داخل أكياس مجهرية تسمى «الأكياس البوغية». وتضم نوعين مهمين في غذاء الإنسان: <b>الخميرة</b> و<b>الكمأة</b>.</p>
+<div class="chips"><span>فطريات كيسية</span><span>خميرة</span><span>كمأة</span><span>غذاء الإنسان</span></div>
+</section>
+
+<section class="sec yeast rv" id="yeast" data-bub>
+<div class="head"><div class="badge">
+<svg viewBox="0 0 64 64"><defs><radialGradient id="yc" cx=".35" cy=".3"><stop offset="0" stop-color="#fff0c2"/><stop offset="1" stop-color="#e3a53a"/></radialGradient></defs><circle cx="26" cy="38" r="18" fill="url(#yc)" stroke="#ffd98a" stroke-width="2"/><circle cx="20" cy="34" r="5" fill="#b9791f" opacity=".6"/><g class="grow"><circle cx="48" cy="20" r="11" fill="url(#yc)" stroke="#ffd98a" stroke-width="2"/></g></svg></div><h2>أولًا: الخميرة</h2></div>
+<div class="chips"><span><i>Saccharomyces cerevisiae</i></span><span>وحيدة الخلية</span><span>تتكاثر بالتبرعم</span></div>
+
+<h3>التعريف</h3>
+<p>الخميرة فطر وحيد الخلية لا يُرى إلا بالمجهر، وأشهر أنواعها <i>Saccharomyces cerevisiae</i>. تتكاثر بالتبرعم، وتحوّل السكريات إلى كحول وغاز ثاني أكسيد الكربون عبر عملية التخمر.</p>
+
+<h3>المواطن البيئية</h3>
+<div class="grid">
+<div class="c"><span class="e">🍇</span><b>الفواكه الناضجة</b><small>العنب والتين، لغناها بالسكريات.</small></div>
+<div class="c"><span class="e">🌸</span><b>الأزهار والأشجار</b><small>رحيق الأزهار وعصارات الأشجار.</small></div>
+<div class="c"><span class="e">🌱</span><b>التربة</b><small>الغنية بالمواد العضوية.</small></div>
+<div class="c"><span class="e">🌡️</span><b>الأجواء المعتدلة</b><small>الأسطح الحلوة الرطبة بحرارة 25–35 °م.</small></div>
+</div>
+
+<h3>طرق التجميع والإنتاج</h3>
+<p>لا تُجمع الخميرة من الطبيعة كالثمار، بل تُنتج صناعيًا:</p>
+<ol class="steps">
+<li>عزل سلالات نقية وتنميتها في المختبر.</li>
+<li>تنميتها في خزانات ضخمة على وسط غني بالسكر، أكثره دبس قصب السكر (المولاس)، مع تهوية وحرارة مناسبتين.</li>
+<li>فصل الخلايا بجهاز الطرد المركزي ثم غسلها.</li>
+<li>ضغطها قوالب طازجة، أو تجفيفها حبيبات جافة.</li>
+</ol>
+
+<h3>طرق التحضير والاستخدام طعامًا</h3>
+<div class="grid">
+<div class="c"><span class="e">🍞</span><b>الخبز والعجائن</b><small>تُنشَّط بماء دافئ وقليل من السكر وتُضاف إلى الدقيق، فينتج غاز ينفخ العجين ويجعل الخبز هشًّا.</small></div>
+<div class="c"><span class="e">🥐</span><b>المخبوزات</b><small>الكعك والبيتزا والمعجنات.</small></div>
+<div class="c"><span class="e">🥤</span><b>المخمرات</b><small>مشروبات وأغذية مخمرة تقليدية غير كحولية.</small></div>
+<div class="c"><span class="e">🧀</span><b>الخميرة الغذائية</b><small>مجففة مُعطَّلة النشاط تُرش على الأطعمة لنكهتها الشبيهة بالجبن.</small></div>
+</div>
+
+<h3>القيمة الغذائية</h3>
+<p>غنية بالبروتين وفيتامينات المجموعة B، وبمعادن كالزنك والسيلينيوم.</p>
+<div class="nut"><span>بروتين</span><span>B1</span><span>B2</span><span>نياسين</span><span>حمض الفوليك</span><span>زنك</span><span>سيلينيوم</span></div>
+</section>
+
+<section class="sec truf rv" id="truffle">
+<svg class="ban" viewBox="0 0 400 150" aria-hidden="true">
+<defs><linearGradient id="sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a1426"/><stop offset="1" stop-color="#27384f"/></linearGradient><linearGradient id="so" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7a5230"/><stop offset=".5" stop-color="#4d3019"/><stop offset="1" stop-color="#2a180b"/></linearGradient><radialGradient id="tg"><stop offset="0" stop-color="#ffd98a" stop-opacity=".5"/><stop offset="1" stop-color="#ffd98a" stop-opacity="0"/></radialGradient></defs>
+<rect width="400" height="62" fill="url(#sk)"/>
+<rect y="60" width="400" height="90" fill="url(#so)"/>
+<path d="M0 60 Q60 52 120 60 T250 58 T400 60 V66 H0Z" fill="#3f7a4a"/>
+<polygon class="bolt" points="300,0 284,26 296,26 286,50 312,20 299,20 308,0" fill="#fff3a8"/>
+<g stroke="#9ecbff" stroke-width="1.6" stroke-linecap="round"><line class="rain" x1="30" y1="14" x2="26" y2="24"/><line class="rain" style="animation-delay:-.3s" x1="80" y1="8" x2="76" y2="18"/><line class="rain" style="animation-delay:-.6s" x1="140" y1="16" x2="136" y2="26"/><line class="rain" style="animation-delay:-.2s" x1="210" y1="10" x2="206" y2="20"/><line class="rain" style="animation-delay:-.5s" x1="260" y1="18" x2="256" y2="28"/><line class="rain" style="animation-delay:-.7s" x1="350" y1="12" x2="346" y2="22"/></g>
+<g stroke="#e5c593" stroke-width="2" fill="none" stroke-linecap="round" opacity=".8"><path d="M70 62 q-6 24-24 38 M70 62 q4 26 20 40 M70 62 q-2 18 4 36"/><path d="M200 62 q-8 20-26 30 M200 62 q8 22 24 32"/><path d="M330 62 q-6 24-22 34 M330 62 q8 20 26 32"/></g>
+<g class="pulse"><circle cx="50" cy="102" r="26" fill="url(#tg)"/><circle cx="224" cy="96" r="26" fill="url(#tg)"/><circle cx="356" cy="100" r="24" fill="url(#tg)"/></g>
+<g fill="#3b2412" stroke="#a87445" stroke-width="1.5"><path d="M34 104 Q36 88 52 88 Q70 90 68 106 Q62 118 48 116 Q34 116 34 104Z"/><path d="M208 98 Q210 82 226 82 Q244 84 242 100 Q236 112 222 110 Q208 110 208 98Z"/><path d="M340 100 Q342 86 357 86 Q373 88 371 102 Q366 113 352 112 Q340 112 340 100Z"/></g>
+<g fill="#a87445"><circle cx="46" cy="98" r="1.6"/><circle cx="58" cy="104" r="1.6"/><circle cx="220" cy="92" r="1.6"/><circle cx="234" cy="98" r="1.6"/><circle cx="350" cy="96" r="1.6"/><circle cx="362" cy="104" r="1.6"/></g>
+<g fill="#c9a06a" opacity=".7"><circle cx="120" cy="120" r="2"/><circle cx="160" cy="132" r="2.4"/><circle cx="290" cy="126" r="2"/><circle cx="20" cy="132" r="2"/></g>
+</svg>
+<div class="head"><div class="badge"><span class="em">🟤</span></div><h2>ثانيًا: الكمأة (الفقع)</h2></div>
+<div class="chips"><span>الفقع</span><span>الترفاس</span><span>بنت الرعد</span><span><i>Terfezia · Tirmania · Tuber</i></span></div>
+
+<h3>التعريف</h3>
+<p>الكمأة فطر كيسي يعيش تحت سطح التربة، ويُعرف عربيًا بـ«الفقع» أو «الترفاس»، ويسمى «بنت الرعد» لارتباط ظهوره بالأمطار الموسمية والرعد. أشهر أنواعها العربية من جنسي <i>Terfezia</i> و<i>Tirmania</i>، وفي أوروبا تنتشر كمأة <i>Tuber</i> الفاخرة.</p>
+
+<h3>المواطن البيئية</h3>
+<div class="grid">
+<div class="c"><span class="e">🏜️</span><b>المناطق الصحراوية</b><small>الجزيرة العربية والعراق وسوريا والأردن وشمال أفريقيا.</small></div>
+<div class="c"><span class="e">🪨</span><b>التربة الخفيفة</b><small>رملية أو طينية رملية.</small></div>
+<div class="c"><span class="e">🌿</span><b>جذور الرقروق</b><small>تعيش قرب نبات الرقروق (Helianthemum) في علاقة تبادل منفعة تسمى الجذور الفطرية (الميكوريزا).</small></div>
+<div class="c"><span class="e">⛈️</span><b>موسم الأمطار</b><small>تظهر من الخريف إلى أوائل الربيع بعد الأمطار والرعد، وذروتها أواخر الشتاء وبدايات الربيع.</small></div>
+</div>
+
+<h3>طرق التجميع</h3>
+<ol class="steps">
+<li><b>تحديد الموقع:</b> البحث عن تشققات صغيرة أو انتفاخات طفيفة في التربة ووجود نبات الرقروق.</li>
+<li><b>الحفر:</b> برفق بعصا أو أداة صغيرة حتى لا تتلف الثمرة.</li>
+<li><b>الفرز:</b> تُنفض عنها التربة وتُنقل في أوعية مهواة.</li>
+<li><b>الحفظ:</b> طازجة في مكان بارد جاف، أو مجففة أو مجمدة لتدوم أطول.</li>
+</ol>
+<p>وتُستخدم في أوروبا كلاب مدربة أو خنازير للكشف عن الكمأة الفاخرة من رائحتها.</p>
+
+<h3>طرق التحضير طعامًا</h3>
+<div class="grid">
+<div class="c"><span class="e">🧼</span><b>التنظيف</b><small>غسلها جيدًا لإزالة الرمل، وتقشيرها عند الحاجة.</small></div>
+<div class="c"><span class="e">🔥</span><b>السلق أو الشواء</b><small>بالماء والملح، أو على الجمر أو في الفرن.</small></div>
+<div class="c"><span class="e">🍲</span><b>الطبخ</b><small>تُضاف إلى الأرز واللحم والمرق والشوربة، وتُقلى مع البصل والسمن أو الزبدة.</small></div>
+<div class="c"><span class="e">🫓</span><b>مع الخبز</b><small>من الأكلات الشعبية المحببة في موسمها.</small></div>
+</div>
+
+<h3>القيمة الغذائية</h3>
+<p>تحتوي على بروتينات وكربوهيدرات وألياف ومعادن، وهي قليلة الدهون، وقد ذُكرت في الموروث الشعبي والطب التقليدي.</p>
+<div class="nut"><span>بروتين</span><span>كربوهيدرات</span><span>ألياف</span><span>بوتاسيوم</span><span>فوسفور</span><span>حديد</span><span>قليلة الدهون</span></div>
+<div class="quote">«الكمأة من المنّ، وماؤها شفاء للعين»<small>حديث نبوي شريف، متفق عليه</small></div>
+</section>
+
+<section class="sec safe rv" id="safety">
+<div class="head"><div class="badge"><span class="em">⚠️</span></div><h2>إرشادات السلامة</h2></div>
+<ul>
+<li>لا تجمع أو تأكل أي فطر بري إلا بعد التأكد التام من نوعه عن طريق خبير، فبعض الفطريات سامة وقد تكون قاتلة.</li>
+<li>اشترِ الكمأة من مصادر موثوقة، واطهُها جيدًا.</li>
+<li>قد يسبب الإفراط في الخميرة أو الكمأة اضطرابًا هضميًا لدى بعض الأشخاص.</li>
+</ul>
+</section>
+
+<section class="sec rv">
+<div class="head"><div class="badge"><span class="em">🌍</span></div><h2>الخاتمة</h2></div>
+<p>تُظهر الخميرة والكمأة كيف تخدم الفطريات الكيسية الإنسان في غذائه. فالخميرة صغيرة الحجم لكنها أساس صناعة الخبز والمخمرات، والكمأة كنز صحراوي موسمي يجمع اللذة والفائدة. ومعرفة مواطنها وطرق جمعها وتحضيرها تساعدنا على الاستفادة منها بأمان، وعلى تقدير التنوع الحيوي في بيئتنا والحفاظ عليه.</p>
+</section>
+
+<section class="sec src rv" id="sources">
+<div class="head"><div class="badge"><span class="em">📚</span></div><h2>المصادر والمراجع</h2></div>
+<h3>كتب علمية</h3>
+<ol>
+<li>Alexopoulos, C. J., Mims, C. W., &amp; Blackwell, M. <i>Introductory Mycology</i>. John Wiley &amp; Sons.</li>
+<li>Kirk, P. M., Cannon, P. F., Minter, D. W., &amp; Stalpers, J. A. <i>Ainsworth &amp; Bisby’s Dictionary of the Fungi</i>. CABI.</li>
+<li>Kurtzman, C. P., Fell, J. W., &amp; Boekhout, T. (Eds.). <i>The Yeasts: A Taxonomic Study</i>. Elsevier.</li>
+<li>Barnett, J. A., Payne, R. W., &amp; Yarrow, D. <i>Yeasts: Characteristics and Identification</i>. Cambridge University Press.</li>
+<li>Hall, I. R., Brown, G. T., &amp; Zambonelli, A. <i>Taming the Truffle</i>. Timber Press.</li>
+<li>Webster, J., &amp; Weber, R. <i>Introduction to Fungi</i>. Cambridge University Press.</li>
+</ol>
+<h3>أبحاث ومنظمات</h3>
+<ol>
+<li>أبحاث الكمأة الصحراوية (<i>Terfezia</i> و<i>Tirmania</i>) وعلاقتها بالرقروق (<i>Helianthemum</i>)، ومنها أعمال الباحث Asunción Morte وزملائه في جامعة مرسية.</li>
+<li>منظمة الأغذية والزراعة (FAO): وثائق المنتجات الغابية غير الخشبية، وتشمل الفطريات الصالحة للأكل.</li>
+<li>موقع MycoBank وموقع Index Fungorum لأسماء الفطريات وتصنيفها.</li>
+<li>مراكز الأبحاث الزراعية وجامعات المنطقة العربية المهتمة بالكمأة، كجامعة الملك سعود وجامعة الكويت.</li>
+</ol>
+<h3>التراث والسنة</h3>
+<ol><li>صحيح البخاري، كتاب التفسير، وصحيح مسلم، كتاب الأشربة: حديث «الكمأة من المنّ».</li></ol>
+<p class="note">تنبيه: تحقق من الطبعة وسنة النشر ورقم الصفحة قبل كتابتها في قائمة المراجع النهائية، فكل معلم أو جامعة قد تطلب تنسيق توثيق مختلفًا.</p>
+</section>
+</main>
+<footer>الفطريات.. طعام للإنسان ✦ مقال علمي مصوّر</footer>
+
+<script>
+(function(){
+var R=Math.random,h=document.querySelector('.hero'),i,e;
+for(i=0;i<34;i++){e=document.createElement('i');e.className='star';e.style.cssText='top:'+R()*55+'%;left:'+R()*100+'%;animation-delay:'+(-R()*3)+'s;opacity:'+(.3+R()*.7);h.appendChild(e)}
+for(i=0;i<26;i++){e=document.createElement('i');e.className='fly';var z=5+R()*9;e.style.cssText='width:'+z+'px;height:'+z+'px;top:'+(38+R()*58)+'%;left:'+R()*100+'%;--x:'+(R()*80-40)+'px;--y:'+(R()*80-60)+'px;animation-duration:'+(5+R()*7)+'s;animation-delay:'+(-R()*10)+'s';h.appendChild(e)}
+document.querySelectorAll('[data-bub]').forEach(function(s){for(var k=0;k<14;k++){var b=document.createElement('i');b.className='bub';var d=8+R()*30;b.style.cssText='width:'+d+'px;height:'+d+'px;left:'+R()*100+'%;animation-duration:'+(9+R()*10)+'s;animation-delay:'+(-R()*14)+'s';s.appendChild(b)}});
+document.querySelectorAll('.grid').forEach(function(g){[].forEach.call(g.children,function(c,n){c.classList.add('rv');c.style.setProperty('--d',(n*.12)+'s')})});
+var els=document.querySelectorAll('.rv,.steps');
+if(!('IntersectionObserver' in window)){els.forEach(function(x){x.classList.add('on')})}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.1});els.forEach(function(x){io.observe(x)})}
+var bar=document.getElementById('bar');
+function sc(){var m=document.documentElement.scrollHeight-innerHeight;bar.style.transform='scaleX('+(m>0?Math.min(1,scrollY/m):0)+')'}
+addEventListener('scroll',sc,{passive:true});sc();
+})();
+</script>
+</body>
+</html>
